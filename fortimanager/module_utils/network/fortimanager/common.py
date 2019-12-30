@@ -161,6 +161,10 @@ class FMGRCommon(object):
             else:
                 if kwargs.get("data", False):
                     params[0]["data"] = kwargs["data"]
+                    if kwargs.get("scope member", False):
+                        params[0]["scope member"] = kwargs["scope member"]
+                    if kwargs.get("push", False):
+                        params[0]["push"] = kwargs["push"]
                 else:
                     params[0]["data"] = kwargs
         return params
